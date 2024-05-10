@@ -1,0 +1,27 @@
+<!-- clientes/landing_page.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Welcome Page</title>
+    <script>
+        function viewInformation() {
+            alert("Tienes permiso para ver la información.");
+        }
+
+        function modifyInformation() {
+            var role = "{{ role }}";
+            if (role === "Asesor bancario") {
+                alert("Tienes permiso para modificar la información.");
+            } else {
+                alert("No tienes permiso para modificar la información.");
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>Welcome to the Client Management System</h1>
+    <p>Logged in as: {{ username }} ({{ role }})</p>
+    <button onclick="viewInformation()">Ver Información</button>
+    <button onclick="modifyInformation()">Modificar Información</button>
+</body>
+</html>
