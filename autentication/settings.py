@@ -57,7 +57,7 @@ ROOT_URLCONF = 'autentication.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(BASE_DIR, 'appauth0', 'template')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
