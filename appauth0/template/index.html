@@ -1,26 +1,8 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Welcome Page</title>
-    <script>
-        function viewInformation() {
-            alert("Tienes permiso para ver la información.");
-        }
+{% extends 'base.html' %}
+{% block content %}
 
-        function modifyInformation() {
-            var role = "{{ role }}";
-            if (role === "Asesor Bancario") {  
-                alert("Tienes permiso para modificar la información.");
-            } else {
-                alert("No tienes permiso para modificar la información.");
-            }
-        }
-    </script>
-</head>
-<body>
-    <h1>Welcome to the Client Management System</h1>
-    <p>Logged in as: {{ username }} ({{ role }})</p>
-    <button onclick="viewInformation()">Ver Información</button>
-    <button onclick="modifyInformation()">Modificar Información</button>
-</body>
-</html>
+    <div style=" display: flex; align-items: center; justify-content: center;" class="login-box auth0-box before">
+            <img style="width:80%; " src="/static/media/monitor.png" />
+    </div>
+
+{% endblock %}
